@@ -1,0 +1,10 @@
+describe employee;  --> for table structure
+
+--> for table alignment
+set lines 256
+set trimout on
+set tab off
+
+SELECT * FROM user_tables; --> show tables in sql plus
+
+cl scr --> clear screen

@@ -1,0 +1,47 @@
+CREATE TABLE employee (
+emp_no NUMBER(10),
+dep_no NUMBER(10),
+emp_name VARCHAR(25),
+dob DATE,
+salary NUMBER(10),
+comm NUMBER(10),
+job VARCHAR(25)
+);
+
+
+INSERT INTO employee VALUES(101,10,'Charity',TO_DATE('12/01/02','DD/MM/YYYY'),22000,1000,'CLERK');
+INSERT INTO employee VALUES(102,11,'Gwen',TO_DATE('02/02/02','DD/MM/YYYY'),23000,1000,'CLERK');
+INSERT INTO employee VALUES(103,10,'Ben',TO_DATE('12/03/99','DD/MM/YYYY'),24000,1100,'MANAGER');
+INSERT INTO employee VALUES(104,1,'Andy',TO_DATE('01/04/02','DD/MM/YYYY'),25000,1200,'ACCOUNTANT');
+INSERT INTO employee VALUES(105,5,'Claire',TO_DATE('21/05/02','DD/MM/YYYY'),26000,1300,'CLERK');
+INSERT INTO employee VALUES(106,10,'Dora',TO_DATE('22/06/01','DD/MM/YYYY'),27000,1400,'MANAGER');
+INSERT INTO employee VALUES(107,10,'Elena',TO_DATE('15/07/01','DD/MM/YYYY'),28000,1500,'CLERK');
+INSERT INTO employee VALUES(108,5,'Fabian',TO_DATE('19/08/02','DD/MM/YYYY'),29000,1600,'ACCOUNTANT');
+INSERT INTO employee VALUES(109,5,'Henry',TO_DATE('10/09/01','DD/MM/YYYY'),30000,1700,'CLERK');
+INSERT INTO employee VALUES(110,1,'Jacob',TO_DATE('17/10/03','DD/MM/YYYY'),31000,1800,'CLERK');
+
+
+SELECT dep_no, job, count(*), SUM(salary) FROM employee GROUP BY ROLLUP(dep_no, job);
+
+
+SELECT dep_no, job, count(*), SUM(salary) FROM employee GROUP BY CUBE(dep_no, job);
+
+
+SELECT rownum, emp_no, emp_name, salary from employee;
+SELECT rownum, emp_no, emp_name, salary from employee ORDER BY salary;
+SELECT rownum, emp_no, emp_name, salary from employee ORDER BY salary DESC;
+
+
+SELECT row_number() over (order by salary), emp_no, emp_name, salary FROM employee ORDER BY salary DESC;
+
+
+
+SELECT emp_no, dep_no, salary, comm, rank() over (partition by dep_no order by salary) AS Rank FROM Employee;
+
+SQL> UPDATE employee SET salary=32000 WHERE emp_no=105;
+1 row updated.
+
+
+
+
+SELECT emp_no, dep_no, salary, comm, dense_rank() over(partition by dep_no order by salary) AS Rank FROM Employee;

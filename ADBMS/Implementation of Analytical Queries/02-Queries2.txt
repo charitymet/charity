@@ -1,0 +1,11 @@
+-- FIRST:
+select dep_no, salary, max(salary) 
+keep(DENSE_RANK FIRST ORDER BY salary desc)
+over (PARTITION BY dep_no) "max"
+from employee;
+
+-- LAST:
+select dep_no, salary, min(salary) 
+keep(DENSE_RANK LAST ORDER BY salary desc)
+over (PARTITION BY dep_no) "min"
+from employee;

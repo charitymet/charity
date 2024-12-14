@@ -1,0 +1,142 @@
+CREATE TYPE typeName AS OBJECT
+(
+	fName VARCHAR(20),
+	mName VARCHAR(20),
+	lName VARCHAR(20)
+);
+/
+
+
+
+CREATE TYPE typeAddress AS OBJECT
+(
+	street VARCHAR(20),
+	city VARCHAR(20),
+	pincode NUMBER(10)
+);
+/
+
+
+CREATE TABLE customer
+(
+	cID NUMBER(5) PRIMARY KEY,
+	cName typeName,
+	cAddr typeAddress,
+	cPhone NUMBER(10)
+);
+
+
+
+
+INSERT INTO customer VALUES (1, typeName('Charity', 'D', 'Monkey'), typeAddress('Seawoods', 'Mumbai', 400099), 123456789);
+INSERT INTO customer VALUES (2, typeName('Crystal', 'M', 'Russo'), typeAddress('Churchgate', 'Mumbai', 400091), 234567891);
+INSERT INTO customer VALUES (3, typeName('Ben', 'N', 'Tennyson'), typeAddress('Bandra', 'Mumbai', 400050), 345678912);
+INSERT INTO customer VALUES (4, typeName('Gwen', 'N', 'Tennyson'), typeAddress('Bandra', 'Mumbai', 400050), 123456789123);
+INSERT INTO customer VALUES (5, typeName('Fabian', 'R', 'Rutter'), typeAddress('Ghatkopar', 'Mumbai', 400064), 567891234);
+INSERT INTO customer VALUES (6, typeName('Dean', 'L', 'Winchester'), typeAddress('Versova', 'Mumbai', 400082), 678912345);
+INSERT INTO customer VALUES (7, typeName('Sam', 'L', 'Winchester'), typeAddress('Versova', 'Mumbai', 400082), 1234);
+
+-- Set column formats for clarity
+COLUMN CID FORMAT 999;
+COLUMN CNAME FORMAT A30;    -- Increase width to accommodate full name
+COLUMN CADDR FORMAT A50;    -- Allocate space for full address
+COLUMN CPHONE FORMAT A15;   -- Allocate space for phone numbers
+
+-- Query to display customer data
+SELECT
+    CID,
+    CNAME(FNAME, MNAME, LNAME) AS CNAME,
+    CADDR(STREET, CITY, PINCODE) AS CADDR,
+    CPHONE
+FROM customer;
+
+ALTER TABLE customer MODIFY cPhone NUMBER(15);
+
+
+
+
+SELECT cust.cAddr.street FROM customer cust WHERE cId = 1;
+
+
+
+
+SELECT cust.cName.fName
+FROM customer cust
+WHERE cId = 1 OR cId = 2;
+
+
+
+SELECT cust.cName.lName
+FROM customer cust
+WHERE cId = 1;
+
+
+
+SELECT cName
+FROM customer;
+
+
+
+
+
+SELECT cId, (cust.cName.fName || ' ' ||cust.cName.mName || ' ' || cust.cName.lName) AS Name, cust.cPhone, (cust.cAddr.street || ', ' ||cust.cAddr.city || ', ' || cust.cAddr.pincode) AS Address
+FROM customer cust;
+
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+
+CREATE OR REPLACE TYPE typeAnimal AS OBJECT
+(
+	breed VARCHAR2(25),
+	name VARCHAR2(25),
+	birthDate DATE
+);
+/
+
+
+
+
+
+CREATE TABLE animal OF typeAnimal;
+
+
+
+
+
+INSERT INTO animal VALUES (typeAnimal('Mule', 'Frances', '01-Apr-02'));
+INSERT INTO animal VALUES (typeAnimal('Bulldog', 'George', '02-May-05'));
+INSERT INTO animal VALUES (typeAnimal('Beagle', 'Charlie', '21-Jan-04'));
+INSERT INTO animal VALUES (typeAnimal('Boxer', 'Pluto', '16-Dec-03'));
+INSERT INTO animal VALUES (typeAnimal('German Shepherd', 'Spike', '01-June-03'));
+
+
+SELECT REF(A) FROM animal A;
+
+
+
+
+
+CREATE TABLE keeper
+(
+	keeperName VARCHAR(25),
+	animalKept REF typeAnimal
+);
+
+
+DESCRIBE keeper;
+
+
+
+INSERT INTO keeper SELECT 'Catherine', REF(A) FROM animal A WHERE name = 'Pluto';
+
+SELECT * FROM keeper;
+
+
+SELECT keeperName, DEREF(K.animalKept) FROM keeper K;
+
+
+
+

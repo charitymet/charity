@@ -1,0 +1,39 @@
+
+SQL> SELECT row_number() over (order by salary), emp_no, emp_name, salary FROM employee ORDER BY salary DESC;
+
+ROW_NUMBER()OVER(ORDERBYSALARY)     EMP_NO EMP_NAME                      SALARY
+------------------------------- ---------- ------------------------- ----------
+                             10        110 Jacob                          31000
+                              9        109 Henry                          30000
+                              8        108 Fabian                         29000
+                              7        107 Elena                          28000
+                              6        106 Dora                           27000
+                              5        105 Claire                         26000
+                              4        104 Andy                           25000
+                              3        103 Ben                            24000
+                              2        102 Gwen                           23000
+                             
+10 rows selected.
+
+
+
+SQL> UPDATE employee SET salary=32000 WHERE emp_no=105;
+
+1 row updated.
+
+SQL> SELECT emp_no, dep_no, salary, comm, rank() over (partition by dep_no order by salary) AS Rank FROM Employee;
+
+    EMP_NO     DEP_NO     SALARY       COMM       RANK
+---------- ---------- ---------- ---------- ----------
+       104          1      25000       1200          1
+       110          1      31000       1800          2
+       108          5      29000       1600          1
+       109          5      30000       1700          2
+       105          5      32000       1300          3
+       101         10      22000       1000          1
+       103         10      24000       1100          2
+       106         10      27000       1400          3
+       107         10      28000       1500          4
+       102         11      23000       1000          1
+
+10 rows selected.
