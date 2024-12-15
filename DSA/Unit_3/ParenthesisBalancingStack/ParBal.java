@@ -1,10 +1,4 @@
 
-/*	Name: Anjana Kizhiyapat
-  	Roll No: 1528
-	Unit 3: Stacks & Queues
-	Program: Parenthesis Balancing - Stack Application
-*/
-
 public class ParBal
 {
 	public static void main(String [] args)
