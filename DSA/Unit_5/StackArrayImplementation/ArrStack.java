@@ -1,8 +1,3 @@
-/*	Name: Anjana Kizhiyapat
-	Roll No.: 1528
-	Unit 5: Stacks
-	Program: Stack - Array Implementation
-*/
 
 import java.util.Scanner;
 
