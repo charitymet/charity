@@ -1,8 +1,3 @@
-/*	Name: Anjana Kizhiyapat
-	Roll No: 1528
-	Unit 6: Graphs
-	Program: DFT on a Graph
-*/
 
 public class DFT 
 {
