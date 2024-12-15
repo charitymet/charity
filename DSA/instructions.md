@@ -56,7 +56,6 @@ The repository is organized as follows:
  ┃ ┃ ┃ ┗ 📜BFT.java
  ┃ ┃ ┗ 📂DFT on a Graph
  ┃ ┃ ┃ ┗ 📜DFT.java
- ┃ ┣ 📜.DS_Store
  ┃ ┗ 📜instructions.md
 ```
 
