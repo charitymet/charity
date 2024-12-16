@@ -54,16 +54,15 @@ This guide will show you how to effectively manage virtual desktops using keyboa
 │   │   ├───📁 CircularQ/
 │   │   │   └───📄 CircularQMenu.java
 │   │   ├───📁 DoubleEndedQ/
-│   │   │   ├───📁 DQ/
-│   │   │   │   └───📄 DQueueMain.java
-│   │   │   └───📄 DQueueMain.java
+│   │   │   └───📁 DQ/
+│   │   │       └───📄 DQueueMain.java
 │   │   ├───📁 InfixToPostfix/
 │   │   │   └───📄 InToPost.java
 │   │   ├───📁 OrdinaryQ/
 │   │   │   ├───📁 ArrayQ/
 │   │   │   │   └───📄 ArrQueue.java
 │   │   │   └───📁 ListQ/
-│   │       └───📄 ListQueue.java
+│   │   │       └───📄 ListQueue.java
 │   │   ├───📁 ParenthesisBalancingStack/
 │   │   │   └───📄 ParBal.java
 │   │   ├───📁 PostfixEvaluation/
@@ -93,6 +92,16 @@ This guide will show you how to effectively manage virtual desktops using keyboa
 │   │       └───📄 DFT.java
 │   └───📄 instructions.md
 ├───📁 JAVA/
+│   ├───📁 JSP/
+│   │   ├───📄 Current Date and Time.md
+│   │   ├───📄 JSP Login Application.md
+│   │   ├───📄 Login Application with Bean.md
+│   │   ├───📄 Multiplication Table Application.md
+│   │   └───📄 Number Guessing .pdf
+│   ├───📁 JSTL/
+│   │   ├───📄 JSTL Tags to Display and Insert Movies into the Database.md
+│   │   ├───📄 javax.servlet.jsp.jstl-1.2.1.jar
+│   │   └───📄 javax.servlet.jsp.jstl-api-1.2.1.jar
 │   ├───📁 Nov/
 │   │   ├───📁 Arraylist,Employee Sort,Hashset,Linkedlistdemo/
 │   │   │   ├───📁 ArrayListDemo/
@@ -102,7 +111,7 @@ This guide will show you how to effectively manage virtual desktops using keyboa
 │   │   │   ├───📁 HashSetDemo/
 │   │   │   │   └───📄 HashSetDemo.java
 │   │   │   └───📁 LinkedListdemo/
-│   │       └───📄 LinkedListDemo.java
+│   │   │       └───📄 LinkedListDemo.java
 │   │   └───📁 Generics/
 │   │       ├───📁 ArrayGeneric/
 │   │       │   └───📄 StackImpl.java
@@ -117,28 +126,32 @@ This guide will show you how to effectively manage virtual desktops using keyboa
 │   │   │   ├───📁 Accounttest/
 │   │   │   │   └───📄 AccountTest.java
 │   │   │   └───📁 Employeetest/
-│   │       └───📄 EmployeeTest.java
+│   │   │       └───📄 EmployeeTest.java
 │   │   ├───📁 Accountest/
 │   │   │   └───📄 AccountTest.java
 │   │   ├───📁 Array&Employee/
 │   │   │   ├───📁 ArrayImplementation/
 │   │   │   │   └───📄 ArrayImpl.java
 │   │   │   └───📁 EmployeeInheritance/
-│   │       └───📄 EmpInheritance.java
+│   │   │       └───📄 EmpInheritance.java
 │   │   ├───📁 CaluculatorInterface/
 │   │   │   ├───📄 CalcLambdaImpl.java
 │   │   │   └───📄 CalculatorDemo.java
 │   │   └───📁 StackImpl/
 │   │       └───📄 MyStackImpl.java
-│   ├───📁 jstl/
-│   │   ├───📄 javax.servlet.jsp.jstl-1.2.1.jar
-│   │   └───📄 javax.servlet.jsp.jstl-api-1.2.1.jar
+│   ├───📁 Spring/
+│   │   ├───📄 Dependency Injection and Bean Scopes in a Spring Application.md
+│   │   ├───📄 JDBC Template Product .odt
+│   │   └───📄 aspect.odt
+│   ├───📁 SpringBoot/
+│   │   └───📄 HotelApplication.md
 │   ├───📁 postgres/
 │   │   └───📄 postgresql-42.7.3.jar
 │   └───📄 instructions.md
 ├───📁 WT/
 │   └───📄 All the best.txt
 └───📄 README.md
+
 ```
 
 ## Keyboard Shortcuts for Workspace Management
