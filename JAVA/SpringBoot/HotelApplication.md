@@ -49,7 +49,8 @@ Search for web and select:
 
 Ensure all 8 dependencies are selected
 
-![Final Dependencies Selection](https://github.com/user-attachments/assets/26cdff77-4c4c-4c0f-abb9-cedca26c5215)
+![Screenshot 2024-12-17 at 1 53 31 AM](https://github.com/user-attachments/assets/ea4aaaff-eaac-4f95-aca2-43559e648057)
+
 
 5. Click Finish and wait for packages to install
 
@@ -161,7 +162,8 @@ Navigate to `src/main/resources/application.properties`
 
 Add the following configuration:
 
-![Application Properties Configuration](https://github.com/user-attachments/assets/2169c3e4-e771-49f6-a691-c8c626d203ae)
+![Screenshot 2024-12-17 at 2 00 41 AM](https://github.com/user-attachments/assets/f94f75eb-8450-4521-8e6b-474a49b8d8c2)
+
 
 ```properties
 spring.application.name=HotelApplication
