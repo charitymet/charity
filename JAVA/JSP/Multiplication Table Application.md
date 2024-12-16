@@ -31,7 +31,7 @@ This HTML file will collect input from the user.
 This JSP file will generate and display the multiplication table.
 
 ```jsp
-<%@ page language="java" %>
+<%@ page language="java" errorPage="ShowError.jsp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Multiplication Table</title>
@@ -68,9 +68,9 @@ This JSP file will generate and display the multiplication table.
 This JSP file handles errors if invalid input is provided.
 
 ```jsp
-<?xml version="1.0" encoding="ISO-8859-1" ?>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
     pageEncoding="ISO-8859-1" isErrorPage="true" %>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -81,7 +81,7 @@ This JSP file handles errors if invalid input is provided.
 <body>
     <h1>OOPS! Something went wrong!</h1>
     <p>Error: <%= exception.getMessage() %></p>
-    <a href="Index.html">Try Again</a>
+    <a href="index.html">Try Again</a>
 </body>
 </html>
 ```
