@@ -1,6 +1,14 @@
 ### Steps to Create a Login Application with Bean
 
 ---
+###Go to -> > Project root-> Right Click> New> Class 
+
+![Screenshot 2024-12-17 at 12 26 21 AM](https://github.com/user-attachments/assets/664536a5-53e0-487b-a87d-5df6815231dd)
+
+###Enter package name as edu.met.p1
+###& class name as UserBean.java
+
+![Screenshot 2024-12-17 at 12 24 39 AM](https://github.com/user-attachments/assets/76d694fc-5844-40cd-a3dd-57f73e112e5c)
 
 #### 1. Create `UserBean.java`
 
