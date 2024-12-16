@@ -1,14 +1,36 @@
 ### Steps to Create a Login Application with Bean
 
 ---
-#### Go to -> > Project root-> Right Click> New> Class 
+# Creating a New Class in Java Project
 
-![Screenshot 2024-12-17 at 12 26 21 AM](https://github.com/user-attachments/assets/664536a5-53e0-487b-a87d-5df6815231dd)
+Follow these steps to create a new class in your Java project.
 
-#### Enter package name as edu.met.p1
-#### & class name as UserBean.java
+### Step 1: Create a New Class
 
-![Screenshot 2024-12-17 at 12 24 39 AM](https://github.com/user-attachments/assets/76d694fc-5844-40cd-a3dd-57f73e112e5c)
+1. **Go to the Project Root**  
+   Navigate to the root of your project.
+
+2. **Right-Click**  
+   Right-click on the project folder.
+
+3. **Select New -> Class**  
+   From the context menu, select `New` and then click on `Class`.
+
+   ![Screenshot 2024-12-17 at 12 26 21 AM](https://github.com/user-attachments/assets/664536a5-53e0-487b-a87d-5df6815231dd)
+
+### Step 2: Enter Package and Class Name
+
+1. **Enter Package Name**  
+   In the "Package" field, enter the package name `edu.met.p1`.
+
+2. **Enter Class Name**  
+   In the "Class Name" field, enter the class name as `UserBean.java`.
+
+   ![Screenshot 2024-12-17 at 12 24 39 AM](https://github.com/user-attachments/assets/76d694fc-5844-40cd-a3dd-57f73e112e5c)
+
+### Step 3: Click Finish
+
+After entering the package and class name, click the **Finish** button to create the new class.
 
 #### 1. Create `UserBean.java`
 
