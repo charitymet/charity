@@ -174,8 +174,63 @@ try {
 </body>
 </html>
 ```
+### Steps to Create and Populate a Database Table in pgAdmin
 
 ---
+
+#### 1. Open pgAdmin
+- Search for **pgAdmin** on your computer and launch it.
+- When prompted, enter the password: `password`.
+
+![pgAdmin Screenshot](https://github.com/user-attachments/assets/a4ccadd4-de03-48fb-9134-bf08a0343416)
+
+---
+
+#### 2. Open Query Tool in pgAdmin
+- In the left panel, select the database `postgres`.
+- Right-click on it and choose **Query Tool**.
+
+![Query Tool Screenshot](https://github.com/user-attachments/assets/4cdab345-6efc-4386-886c-5bc46008009d)
+
+---
+
+#### 3. Create a Table
+- In the Query Tool, type the following SQL command to create the `users` table:
+
+```sql
+CREATE TABLE users (
+    uid INTEGER,
+    name VARCHAR(100),
+    password VARCHAR(100)
+);
+```
+
+- Click the **Execute/Run** button to execute the command.
+
+---
+
+#### 4. Insert Data into the Table
+- After creating the table, use the following SQL command to insert a record into the table:
+
+```sql
+INSERT INTO users VALUES (102, 'Priya', '12345');
+```
+
+- Click the **Execute/Run** button to execute the command.
+
+![Insert Data Screenshot](https://github.com/user-attachments/assets/6d32fe7b-9bec-4d27-b5a0-8f15a34ea38f)
+
+---
+
+#### 5. Run Your Application
+- After creating and populating the database table, run the application from **Eclipse** or your preferred IDE.
+
+---
+
+#### Notes
+- Ensure that the database credentials in your application match those used in pgAdmin.
+- Verify that the `users` table and its data are correctly set up before testing the application.
+
 
 ### Output Scenarios
 
