@@ -1,3 +1,19 @@
+# Code Repository
+
+You can access the code for the project through the following link:
+
+[Access the Code on Google Drive](https://shorturl.at/RG5Yy)
+
+Feel free to download, modify, or explore the code as needed.
+
+## Instructions for Use:
+
+1. Click on the link above to open the Google Drive.
+2. Once the page loads, you can download the files by right-clicking and selecting **Download**.
+
+## Note:
+- This link will direct you to a folder containing the code for the project.
+
 # React Application Setup: Development Workspace Preparation
 
 ## Workspace Configuration
