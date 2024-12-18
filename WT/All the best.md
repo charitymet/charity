@@ -13,7 +13,7 @@ Feel free to download, modify, or explore the code as needed.
 
 ## Note:
 - This link will direct you to a folder containing the code for the project.
-
+---
 # React Application Setup: Development Workspace Preparation
 
 ## Workspace Configuration
