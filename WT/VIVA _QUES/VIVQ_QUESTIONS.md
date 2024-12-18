@@ -181,32 +181,6 @@ and upon a request, it queues it within the event loop which call the JavaScript
 
     function when it is finished. 
 
-    48+ Top Node.js Interview Questions and Answers in 2021 
-
-    Lesson 7 of 7By Taha Sufiyan 
-
-    Last updated on Apr 9, 2021129830 Previous 
-
-    Node.js is a super popular server-side platform that more and more organizations are 
-
-    using. If you are preparing for a career change and have an upcoming job interview, it‟s 
-
-    always a good idea to prepare and brush up on your interview skills beforehand. Although there are a few commonly asked Node.js interview questions that pop up during all types of interviews, we also recommend that you prepare by focusing on exclusive questions to your specific industry. 
-
-    We have compiled a comprehensive list of common Node.js interview questions that come up often in interviews and the best ways to answer these questions. This will also 
-
-    help you understand the fundamental concepts of Node.js. 
-
-    The Node.js interview questions are grouped into the following categories: 
-
-1. Beginner Node.js Interview Questions 
-1. Intermediate Node.js Interview Questions 
-1. Advanced Node.js Interview Questions 
-
-
-
-EXPLORE COURSE 
-
 Beginner Node.js Interview Questions 
 
 1. What is Node.js? Where can you use it? 
