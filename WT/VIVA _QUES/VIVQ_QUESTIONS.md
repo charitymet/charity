@@ -250,3 +250,352 @@ Node.js APIs are built around callbacks to ensure non-blocking behavior.
 In Node.js, I/O operations are typically asynchronous to ensure that other processes can continue while waiting for the I/O operation to complete.
 
 ---
+
+## 7) How is Node.js most frequently used?
+
+Node.js is widely used in the following applications:
+
+1. Real-time chats
+2. Internet of Things (IoT)
+3. Complex SPAs (Single-Page Applications)
+4. Real-time collaboration tools
+5. Streaming applications
+6. Microservices architecture
+
+---
+
+## 8) Explain the difference between frontend and backend development?
+
+| Frontend                             | Backend                             |
+|--------------------------------------|-------------------------------------|
+| Refers to the client-side of an application | Refers to the server-side of an application |
+| It is the part of a web application that users can see and interact with | Constitutes everything that happens behind the scenes |
+| It typically includes everything related to the visual aspects of a web application | Generally includes a web server that communicates with a database to serve requests |
+| Technologies: HTML, CSS, JavaScript, AngularJS, ReactJS | Technologies: Java, PHP, Python, Node.js |
+
+---
+
+## 9) What is NPM?
+
+**NPM** stands for **Node Package Manager**. It is responsible for managing all the packages and modules for Node.js. NPM provides two main functionalities:
+
+1. **Online Repositories**: It offers online repositories for Node.js packages/modules, searchable on [search.nodejs.org](https://search.nodejs.org).
+2. **Command-line Utility**: It provides a command-line utility to install Node.js packages, as well as manage Node.js versions and dependencies.
+
+---
+
+## 10) What are the modules in Node.js?
+
+**Modules** in Node.js are like JavaScript libraries that can be used in a Node.js application to include a set of functions. To include a module, use the `require()` function with the module's name.
+
+Some of the core modules in Node.js are:
+
+| Core Modules   | Description                                                  |
+|----------------|--------------------------------------------------------------|
+| `HTTP`         | Includes classes, methods, and events to create an HTTP server |
+| `util`         | Includes utility functions useful for developers              |
+| `fs` (File System) | Includes events, classes, and methods for file I/O operations  |
+| `url`          | Includes methods for URL parsing and query string handling    |
+
+---
+
+## 11) Why is Node.js preferred over other backend technologies like Java and PHP?
+
+Some reasons why Node.js is preferred include:
+
+- **Speed**: Node.js is very fast due to its non-blocking, event-driven architecture.
+- **Node Package Manager (NPM)**: It has over 50,000 packages available for developers.
+- **Real-time Web Applications**: Perfect for data-intensive, real-time web applications since Node.js never waits for an API to return data.
+- **Code Synchronization**: Node.js allows better synchronization of code between server and client due to using the same language (JavaScript) on both ends.
+- **Ease of Use**: JavaScript is a widely-used language, making it easier for web developers to start using Node.js in their projects.
+
+---
+
+## 12) What is the package.json file?
+
+The **`package.json`** file is the heart of a Node.js application. It holds all the metadata for a specific project, such as dependencies, scripts, and other configuration settings. The `package.json` file is found in the root directory of any Node.js application or module.
+
+---
+
+## 13) What is REPL in Node.js?
+
+**REPL** stands for **Read-Eval-Print Loop**. It represents an interactive computer environment where commands are entered, evaluated, and the results are printed. It is similar to a console or shell (e.g., Windows command prompt or Unix/Linux shell), providing a quick way to experiment with JavaScript code in a Node.js environment.
+
+---
+Here’s the clean and formatted content for your `.md` file:
+
+# React Questions and Answers
+
+## 1) What is React?
+
+React is a front-end, open-source JavaScript library used for developing user interfaces, particularly for single-page applications. It is highly useful in building complex and reusable UI components for mobile and web applications, as it follows a component-based approach.
+
+### Key Features of React:
+- Supports **server-side rendering**.
+- Uses **virtual DOM** instead of real DOM, as real DOM manipulations are expensive.
+- Follows **unidirectional data flow**.
+- Uses **reusable/composable UI components** for building views.
+
+---
+
+## 2) What is `useState()` in React?
+
+`useState()` is a built-in React Hook that allows you to have state variables in functional components. It is used when the DOM needs dynamic manipulation or control.
+
+---
+
+## 3) What are keys in React?
+
+A **key** is a special string attribute that must be included when rendering lists of elements.
+
+### Example of a list using a key:
+
+```javascript
+const ids = [1, 2, 3, 4, 5];
+const listElements = ids.map((id) => {
+  return (
+    <li key={id.toString()}>
+      {id}
+    </li>
+  );
+});
+```
+
+### Importance of keys:
+- Helps React identify which elements were added, changed, or removed.
+- Keys provide a unique identity for each element.
+- React relies on keys to track the order and uniqueness of elements.
+- Keys are commonly used for displaying lists of data coming from an API.
+
+---
+
+## 4) What is JSX?
+
+**JSX** stands for JavaScript XML. It allows you to write HTML-like syntax inside JavaScript and place it directly in the DOM without using functions like `appendChild()` or `createElement()`.
+
+> **Note**: You can create React applications without JSX as well.
+
+### How JSX works:
+Without JSX:
+```javascript
+const text = React.createElement('p', {}, 'This is a text');
+const container = React.createElement('div', {}, text);
+ReactDOM.render(container, rootElement);
+```
+
+With JSX:
+```javascript
+const container = (
+  <div>
+    <p>This is a text</p>
+  </div>
+);
+ReactDOM.render(container, rootElement);
+```
+
+JSX allows you to directly embed HTML inside JavaScript.
+
+---
+
+## 5) What are the differences between functional and class components?
+
+Before the introduction of Hooks, **functional components** were considered stateless, while **class components** were stateful. After Hooks, functional components became equivalent to class components.
+
+### Functional Components:
+Functional components are just JavaScript functions, and they can be declared using either the `function` keyword or an arrow function.
+
+Example:
+```javascript
+function Card(props) {
+  return (
+    <div className="main-container">
+      <h2>Title of the card</h2>
+    </div>
+  );
+}
+
+const Card = (props) => {
+  return (
+    <div className="main-container">
+      <h2>Title of the card</h2>
+    </div>
+  );
+};
+```
+
+### Class Components:
+Class components are declared using ES6 classes and extend `React.Component`.
+
+Example:
+```javascript
+class Card extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
+      <div className="main-container">
+        <h2>Title of the card</h2>
+      </div>
+    );
+  }
+}
+```
+
+### Handling Props:
+In functional components, props are passed directly to the function:
+
+```javascript
+function StudentInfo(props) {
+  return (
+    <div className="main">
+      <h2>{props.name}</h2>
+      <h4>{props.rollNumber}</h4>
+    </div>
+  );
+}
+```
+
+In class components, props are accessed using `this.props`:
+
+```javascript
+class StudentInfo extends React.Component {
+  render() {
+    return (
+      <div className="main">
+        <h2>{this.props.name}</h2>
+        <h4>{this.props.rollNumber}</h4>
+      </div>
+    );
+  }
+}
+```
+
+### Handling State:
+Functional components use **React Hooks** (`useState`) to handle state:
+
+```javascript
+function ClassRoom(props) {
+  let [studentsCount, setStudentsCount] = useState(0);
+
+  const addStudent = () => {
+    setStudentsCount(++studentsCount);
+  };
+
+  return (
+    <div>
+      <p>Number of students in the classroom: {studentsCount}</p>
+      <button onClick={addStudent}>Add Student</button>
+    </div>
+  );
+}
+```
+
+Class components use `this.state` to manage state:
+
+```javascript
+class ClassRoom extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { studentsCount: 0 };
+    this.addStudent = this.addStudent.bind(this);
+  }
+
+  addStudent() {
+    this.setState((prevState) => {
+      return { studentsCount: prevState.studentsCount + 1 };
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Number of students in the classroom: {this.state.studentsCount}</p>
+        <button onClick={this.addStudent}>Add Student</button>
+      </div>
+    );
+  }
+}
+```
+
+---
+
+## 6) What is the use of `useEffect` React Hook?
+
+The `useEffect` React Hook is used to perform side effects in functional components. It allows you to inform React that your component requires some operations to be performed after rendering or after a state change.
+
+### Syntax:
+```javascript
+useEffect(callback, [dependencies]);
+```
+
+- **callback**: The function containing the logic for the side effect.
+- **dependencies**: An optional array of dependencies that determines when the `useEffect` hook should run.
+
+### Example:
+```javascript
+import { useEffect } from 'react';
+
+function WelcomeGreetings({ name }) {
+  const msg = `Hi, ${name}!`;  // Calculates output
+
+  useEffect(() => {
+    document.title = `Welcome to you, ${name}`;  // Side effect!
+  }, [name]);
+
+  return <div>{msg}</div>;  // Calculates output
+}
+```
+
+In this example, `document.title` is updated after the component renders, which is considered a side effect. The `useEffect` hook ensures that the effect runs after changes to the `name` prop.
+
+Consider you don’t want to execute the document title update each time on rendering of `WelcomeGreetings` component, and you want it to be executed only when the `name` prop changes. In that case, you need to supply `name` as a dependency to `useEffect(callback, [name])`.
+
+---
+
+## 8) Explain React Hooks.
+
+### What are Hooks?
+**Hooks** are functions that allow us to "hook into" React state and lifecycle features from a **functional component**.
+
+- React Hooks **cannot** be used in class components.
+- Hooks allow you to write components without the need for a class.
+
+### Why were Hooks introduced in React?
+React hooks were introduced in **React 16.8**. Before hooks, functional components were considered **stateless components**, and only class components were capable of handling state management and lifecycle methods. The introduction of hooks was to avoid the need to convert a functional component to a class component just to use state or lifecycle methods.
+
+---
+
+### Example of a Hook: `useState` Hook
+
+In functional components, the `useState` hook lets us define a state for a component:
+
+```javascript
+function Person(props) {
+  // We are declaring a state variable called 'name'.
+  // setName is a function to update/change the value of 'name'.
+  let [name, setName] = useState('');
+}
+```
+
+In the code above, the state variable **`name`** can be directly used inside the component's JSX.
+
+---
+
+## 9) What are the rules that must be followed while using React Hooks?
+
+There are two key rules that you must follow when working with React Hooks:
+
+1. **React Hooks must be called only at the top level.**  
+   They cannot be called inside nested functions, loops, or conditionals.
+
+2. **Hooks can only be called from React Function Components.**  
+   This ensures that hooks are used only within components that are written as functions and not class components.
+
+By adhering to these rules, React guarantees that hooks behave predictably and maintain the integrity of the component lifecycle.
+
+---
+
+
+
