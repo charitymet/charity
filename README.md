@@ -1,13 +1,3 @@
-# To-Do List
-
-- [ ] Learn Markdown syntax
-- [ ] Write a blog post
-- [x] Complete project setup
-- [ ] Review pull requests
-
-
-
-
 
 # Project Management: Keyboard Shortcuts and File Structure Guide
 
